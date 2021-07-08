@@ -10,10 +10,30 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        let defaults = UserDefaults.standard
+//        if defaults.object(forKey: "isFirstTime") == nil {
+//            defaults.set("No", forKey:"isFirstTime")
+//            defaults.synchronize()
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+//                     self.window?.rootViewController = viewController
+//                     self.window?.makeKeyAndVisible()
+//
+//        }
+//        if(UserDefaults.standard.bool(forKey: "notFirstInApp") == false){
+//            UserDefaults.standard.set(true, forKey: "notFirstInApp")
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+//            self.window?.rootViewController = viewController
+//            self.window?.makeKeyAndVisible()
+//        }else{
+           //Here you can show storyboard that you have to launch after first launch
+        // }
+
         return true
     }
 
