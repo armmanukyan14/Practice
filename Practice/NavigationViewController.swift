@@ -8,22 +8,50 @@
 import UIKit
 
 class NavigationViewController: UINavigationController {
-
+    
+    private let onboardingIsSeen = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        viewDidAppear(animated)
+        showInitialScreen()
     }
-    */
-
+    
+    private func showInitialScreen() {
+        if onboardingIsSeen {
+            showSignIn()
+        } else {
+            showOnboardingScreen()
+        }
+    }
+    
+    private func showOnboardingScreen() {
+        let mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainViewController")
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+            window.rootViewController = mainViewController
+            UIView.transition(with: window,
+                              duration: 0,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
+        }
+    }
+    
+    private func showSignIn() {
+        let signInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInViewController")
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+            window.rootViewController = signInViewController
+            UIView.transition(with: window,
+                              duration: 0,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
+        }
+    }
+    
+    
+    
 }

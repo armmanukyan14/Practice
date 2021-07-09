@@ -13,6 +13,7 @@
 		554D6281268E164400EC8F5E /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6280268E164400EC8F5E /* SecondPageViewController.swift */; };
 		554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */; };
 		554D6287268E167E00EC8F5E /* LastPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6286268E167E00EC8F5E /* LastPageViewController.swift */; };
+		5552E26D26981B90002B81CE /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552E26C26981B90002B81CE /* UserDefaultsHelper.swift */; };
 		555A2E08268C47C300866F1A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 555A2E07268C47C300866F1A /* .gitignore */; };
 		55D2AFA2269731B200FD0996 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2AFA1269731B200FD0996 /* NavigationViewController.swift */; };
 		55F2DB8C268B55F300D2C3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F2DB8B268B55F300D2C3BA /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 		554D6280268E164400EC8F5E /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
 		554D6286268E167E00EC8F5E /* LastPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageViewController.swift; sourceTree = "<group>"; };
+		5552E26C26981B90002B81CE /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		555A2E07268C47C300866F1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		55D2AFA1269731B200FD0996 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		55F2DB88268B55F300D2C3BA /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				555A2E06268C479500866F1A /* Git */,
+				5552E26C26981B90002B81CE /* UserDefaultsHelper.swift */,
 				55F2DB8B268B55F300D2C3BA /* AppDelegate.swift */,
 				55F2DB8D268B55F300D2C3BA /* SceneDelegate.swift */,
 				554D627D268E160400EC8F5E /* FirstPageViewController.swift */,
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5552E26D26981B90002B81CE /* UserDefaultsHelper.swift in Sources */,
 				554D627E268E160400EC8F5E /* FirstPageViewController.swift in Sources */,
 				55F2DB90268B55F300D2C3BA /* SignInViewController.swift in Sources */,
 				55F2DB8C268B55F300D2C3BA /* AppDelegate.swift in Sources */,

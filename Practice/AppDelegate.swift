@@ -22,7 +22,7 @@ var window: UIWindow?
 //            let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
 //                     self.window?.rootViewController = viewController
 //                     self.window?.makeKeyAndVisible()
-//
+        
 //        }
 //        if(UserDefaults.standard.bool(forKey: "notFirstInApp") == false){
 //            UserDefaults.standard.set(true, forKey: "notFirstInApp")

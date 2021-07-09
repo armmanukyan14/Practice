@@ -92,6 +92,17 @@ extension MainViewController: UIPageViewControllerDataSource {
         return nil
     }
     
+    private func showSignIn() {
+        let signInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInViewController")
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+            window.rootViewController = signInViewController
+            UIView.transition(with: window,
+                              duration: 0,
+                              options: .transitionCrossDissolve,
+                              animations: nil,
+                              completion: nil)
+        }
+    }
 }
 extension MainViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
