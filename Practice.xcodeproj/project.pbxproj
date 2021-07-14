@@ -11,6 +11,8 @@
 		553AE606269C168900156F5F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AE605269C168900156F5F /* OnboardingViewController.swift */; };
 		553AE60A269C181700156F5F /* LastPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AE609269C181700156F5F /* LastPageViewController.swift */; };
 		553AE60D269C7C0100156F5F /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AE60C269C7C0100156F5F /* MainScreenViewController.swift */; };
+		554CC9E7269F20D400144BE0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554CC9E6269F20D400144BE0 /* OpenSans-Regular.ttf */; };
+		554CC9EA269F213700144BE0 /* Futura Bold font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554CC9E9269F213700144BE0 /* Futura Bold font.ttf */; };
 		554D627E268E160400EC8F5E /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D627D268E160400EC8F5E /* FirstPageViewController.swift */; };
 		554D6281268E164400EC8F5E /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6280268E164400EC8F5E /* SecondPageViewController.swift */; };
 		554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */; };
@@ -30,6 +32,8 @@
 		553AE605269C168900156F5F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		553AE609269C181700156F5F /* LastPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageViewController.swift; sourceTree = "<group>"; };
 		553AE60C269C7C0100156F5F /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		554CC9E6269F20D400144BE0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		554CC9E9269F213700144BE0 /* Futura Bold font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold font.ttf"; sourceTree = "<group>"; };
 		554D627D268E160400EC8F5E /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
 		554D6280268E164400EC8F5E /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 				CA1144E25014712640CB0104 /* Pods_Practice.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		554CC9E5269F1FFD00144BE0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				554CC9E9269F213700144BE0 /* Futura Bold font.ttf */,
+				554CC9E6269F20D400144BE0 /* OpenSans-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		5552E27326983310002B81CE /* Helper */ = {
@@ -129,6 +142,7 @@
 				55F2DB94268B55F400D2C3BA /* Assets.xcassets */,
 				55F2DB96268B55F400D2C3BA /* LaunchScreen.storyboard */,
 				55F2DB99268B55F400D2C3BA /* Info.plist */,
+				554CC9E5269F1FFD00144BE0 /* Fonts */,
 				5552E2742698333E002B81CE /* View Controllers */,
 				5552E27326983310002B81CE /* Helper */,
 				555A2E06268C479500866F1A /* Git */,
@@ -204,6 +218,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554CC9E7269F20D400144BE0 /* OpenSans-Regular.ttf in Resources */,
+				554CC9EA269F213700144BE0 /* Futura Bold font.ttf in Resources */,
 				555A2E08268C47C300866F1A /* .gitignore in Resources */,
 				55F2DB98268B55F400D2C3BA /* LaunchScreen.storyboard in Resources */,
 				55F2DB95268B55F400D2C3BA /* Assets.xcassets in Resources */,

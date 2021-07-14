@@ -18,4 +18,9 @@ extension UIColor {
     static var textColor: UIColor {
         UIColor.init(red: 215/255, green: 215/255, blue: 215/255, alpha: 1)
     }
+    static var tripYellow : UIColor {
+        UIColor.init(red: 242/255, green: 191/255, blue: 30/255, alpha: 1)
+    }
 }
+
+

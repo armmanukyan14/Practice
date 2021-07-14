@@ -14,15 +14,15 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var forgotPassword: UIButton!
+    @IBOutlet weak var haventAccount: UILabel!
     
     // MARK: - Actions
-    @IBAction func forgotPasswordTapped(_ sender: UIButton) {
-    }
-    
     @IBAction func eyeButtonTapped(_ sender: UIButton) {
-        password.isSecureTextEntry = false
-        password.textColor = .white
+        if password.isSecureTextEntry == true {
+            password.isSecureTextEntry = false
+        } else {
+            password.isSecureTextEntry = true
+        }
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
@@ -35,6 +35,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         changeTextFields()
         changeBackground()
+        haventAccount.textColor = .white
         
     }
     
