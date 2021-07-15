@@ -10,6 +10,7 @@ import UIKit
 
 class LastPageViewController: UIViewController {
     
+    // MARK: - Actions
     @IBAction func doneButtonTapped(_ sender: UIButton) {
         DefaultsHelper().setOnboarding(isSeen: true)
         let signInVC = UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController")

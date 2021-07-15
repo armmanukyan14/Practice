@@ -18,6 +18,7 @@
 		554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */; };
 		554E6902269C095F00076BC5 /* UIStoryboard + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */; };
 		5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552E27726983573002B81CE /* DefaultsHelper.swift */; };
+		555782FB26A044B400B964FA /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555782FA26A044B400B964FA /* String + Ext.swift */; };
 		5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5558E339269EB7C700E56C23 /* UIColor + Ext.swift */; };
 		555A2E08268C47C300866F1A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 555A2E07268C47C300866F1A /* .gitignore */; };
 		55F2DB8C268B55F300D2C3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F2DB8B268B55F300D2C3BA /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 		554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
 		554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard + Ext.swift"; sourceTree = "<group>"; };
 		5552E27726983573002B81CE /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHelper.swift; sourceTree = "<group>"; };
+		555782FA26A044B400B964FA /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		5558E339269EB7C700E56C23 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		555A2E07268C47C300866F1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		55F2DB88268B55F300D2C3BA /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				5552E27726983573002B81CE /* DefaultsHelper.swift */,
 				554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */,
 				5558E339269EB7C700E56C23 /* UIColor + Ext.swift */,
+				555782FA26A044B400B964FA /* String + Ext.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				554E6902269C095F00076BC5 /* UIStoryboard + Ext.swift in Sources */,
+				555782FB26A044B400B964FA /* String + Ext.swift in Sources */,
 				554D627E268E160400EC8F5E /* FirstPageViewController.swift in Sources */,
 				5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */,
 				55F2DB90268B55F300D2C3BA /* SignInViewController.swift in Sources */,

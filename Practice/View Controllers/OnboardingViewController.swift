@@ -30,7 +30,6 @@ class OnboardingViewController: UIViewController {
         pageViewController.setViewControllers([pages[pageControl.currentPage]], direction: direction, animated: true)
         currentIndex = pageControl.currentPage
         hideSkip()
-        
     }
     
     @IBAction func skipButtonTapped(_ sender: UIButton) {
