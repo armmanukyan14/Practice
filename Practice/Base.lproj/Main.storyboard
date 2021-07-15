@@ -75,7 +75,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRI-Hn-IZg">
                                         <rect key="frame" x="0.0" y="32" width="371" height="55"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                         <state key="normal" title="Sign In" backgroundImage="donebtn">
                                             <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                                         </state>
@@ -264,39 +264,39 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map with human" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-Lc-b9Y">
                                 <rect key="frame" x="6" y="119" width="402" height="317"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ye6-Lc-b9Y" secondAttribute="height" multiplier="402:317" id="KYs-ga-o4N"/>
+                                    <constraint firstAttribute="width" secondItem="Ye6-Lc-b9Y" secondAttribute="height" multiplier="402:317" id="L8g-je-hbF"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TripCoin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="cYU-Uw-bag">
                                 <rect key="frame" x="31" y="487" width="352" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="cYU-Uw-bag" secondAttribute="height" multiplier="176:21" id="r8d-7f-M4X"/>
+                                    <constraint firstAttribute="width" secondItem="cYU-Uw-bag" secondAttribute="height" multiplier="176:21" id="pJw-UL-0R4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="32"/>
                                 <color key="textColor" red="0.34901960784313724" green="0.73725490196078436" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TripCoin rewards you for travelling around Australia whether you’re going up the coast or just down the road" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hSk-wk-2zB">
-                                <rect key="frame" x="52" y="565" width="310" height="61"/>
+                                <rect key="frame" x="52" y="565" width="310" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="hSk-wk-2zB" secondAttribute="height" multiplier="310:61" id="itL-mm-SdP"/>
+                                    <constraint firstAttribute="width" secondItem="hSk-wk-2zB" secondAttribute="height" multiplier="62:13" id="ib6-O8-2Xv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
-                                <color key="textColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ck2-3q-o6j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hSk-wk-2zB" firstAttribute="leading" secondItem="ck2-3q-o6j" secondAttribute="leading" constant="52" id="Ee1-i2-gQe"/>
                             <constraint firstItem="cYU-Uw-bag" firstAttribute="leading" secondItem="ck2-3q-o6j" secondAttribute="leading" constant="31" id="IR7-L0-jhQ"/>
+                            <constraint firstItem="hSk-wk-2zB" firstAttribute="top" secondItem="cYU-Uw-bag" secondAttribute="bottom" constant="36" id="JkQ-Um-pGe"/>
                             <constraint firstItem="Ye6-Lc-b9Y" firstAttribute="top" secondItem="ck2-3q-o6j" secondAttribute="top" constant="75" id="Jpa-kz-Q1c"/>
                             <constraint firstItem="cYU-Uw-bag" firstAttribute="top" secondItem="Ye6-Lc-b9Y" secondAttribute="bottom" constant="51" id="KEz-Ys-so5"/>
                             <constraint firstAttribute="trailing" secondItem="Ye6-Lc-b9Y" secondAttribute="trailing" constant="6.2000000000000002" id="NcH-jN-UCq"/>
                             <constraint firstItem="Ye6-Lc-b9Y" firstAttribute="leading" secondItem="ck2-3q-o6j" secondAttribute="leading" constant="6" id="Qgt-xJ-bmK"/>
-                            <constraint firstItem="hSk-wk-2zB" firstAttribute="top" secondItem="cYU-Uw-bag" secondAttribute="bottom" constant="36" id="ZDq-iV-kcK"/>
-                            <constraint firstItem="ck2-3q-o6j" firstAttribute="trailing" secondItem="hSk-wk-2zB" secondAttribute="trailing" constant="52" id="bCF-4a-aGW"/>
+                            <constraint firstItem="ck2-3q-o6j" firstAttribute="trailing" secondItem="hSk-wk-2zB" secondAttribute="trailing" constant="52" id="RHp-XZ-t2B"/>
+                            <constraint firstItem="hSk-wk-2zB" firstAttribute="leading" secondItem="ck2-3q-o6j" secondAttribute="leading" constant="52" id="SAR-Ho-Xd9"/>
                             <constraint firstItem="ck2-3q-o6j" firstAttribute="trailing" secondItem="cYU-Uw-bag" secondAttribute="trailing" constant="31" id="cbN-jT-aDG"/>
                         </constraints>
                     </view>
@@ -335,7 +335,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kRo-M9-Q4k"/>
@@ -421,43 +421,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coin text" translatesAutoresizingMaskIntoConstraints="NO" id="aSW-FG-pHS">
-                                <rect key="frame" x="33" y="442" width="349" height="104"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="aSW-FG-pHS" secondAttribute="height" multiplier="349:104" id="gEh-q0-VYQ"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coin Illustration" translatesAutoresizingMaskIntoConstraints="NO" id="YeN-9z-pi4">
-                                <rect key="frame" x="25" y="84" width="364" height="318"/>
+                                <rect key="frame" x="25" y="109" width="364" height="318"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="YeN-9z-pi4" secondAttribute="height" multiplier="182:159" id="Lrf-PY-UY0"/>
+                                    <constraint firstAttribute="width" secondItem="YeN-9z-pi4" secondAttribute="height" multiplier="182:159" id="22U-rm-Kg5"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t33-V8-t3t">
-                                <rect key="frame" x="22" y="576" width="371" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-tx-deS">
+                                <rect key="frame" x="21" y="616" width="372" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="t33-V8-t3t" secondAttribute="height" multiplier="371:55" id="wco-O0-NhS"/>
+                                    <constraint firstAttribute="width" secondItem="cRE-tx-deS" secondAttribute="height" multiplier="372:55" id="hJ7-Ec-odY"/>
                                 </constraints>
-                                <state key="normal" image="done" backgroundImage="donebtn">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Done" backgroundImage="donebtn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="doneButtonTapped:" destination="n0p-ff-Oy9" eventType="touchUpInside" id="bq4-yx-u74"/>
-                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Coins are securely stashed in your Vault." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ybH-b3-29B">
+                                <rect key="frame" x="45" y="472" width="324" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ybH-b3-29B" secondAttribute="height" multiplier="81:11" id="mmJ-T8-Jtm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use them in the Shop for exciting products, experiences and more!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="lAn-8U-49q">
+                                <rect key="frame" x="32" y="534" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lAn-8U-49q" secondAttribute="height" multiplier="175:22" id="vyT-9H-GE7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" red="0.12156862745098039" green="0.11764705882352941" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="050-35-eS9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aSW-FG-pHS" firstAttribute="top" secondItem="YeN-9z-pi4" secondAttribute="bottom" constant="40" id="4M7-AC-ohu"/>
+                            <constraint firstItem="cRE-tx-deS" firstAttribute="leading" secondItem="050-35-eS9" secondAttribute="leading" constant="21" id="3FO-T7-KS4"/>
+                            <constraint firstItem="050-35-eS9" firstAttribute="trailing" secondItem="ybH-b3-29B" secondAttribute="trailing" constant="45" id="APD-Fg-veU"/>
                             <constraint firstItem="050-35-eS9" firstAttribute="trailing" secondItem="YeN-9z-pi4" secondAttribute="trailing" constant="25" id="CnR-OT-agm"/>
-                            <constraint firstItem="t33-V8-t3t" firstAttribute="top" secondItem="aSW-FG-pHS" secondAttribute="bottom" constant="30" id="NNK-DF-1I7"/>
+                            <constraint firstItem="ybH-b3-29B" firstAttribute="leading" secondItem="050-35-eS9" secondAttribute="leading" constant="45" id="HeU-PJ-QNi"/>
+                            <constraint firstItem="ybH-b3-29B" firstAttribute="top" secondItem="YeN-9z-pi4" secondAttribute="bottom" constant="45" id="IDJ-rJ-SlS"/>
                             <constraint firstItem="YeN-9z-pi4" firstAttribute="leading" secondItem="050-35-eS9" secondAttribute="leading" constant="25" id="NhM-nx-k1t"/>
-                            <constraint firstItem="YeN-9z-pi4" firstAttribute="top" secondItem="050-35-eS9" secondAttribute="top" constant="40" id="gz7-IL-KR6"/>
-                            <constraint firstItem="t33-V8-t3t" firstAttribute="leading" secondItem="050-35-eS9" secondAttribute="leading" constant="22" id="nIv-Zf-xrj"/>
-                            <constraint firstItem="050-35-eS9" firstAttribute="trailing" secondItem="t33-V8-t3t" secondAttribute="trailing" constant="21" id="o8A-KH-bqa"/>
-                            <constraint firstItem="050-35-eS9" firstAttribute="trailing" secondItem="aSW-FG-pHS" secondAttribute="trailing" constant="32" id="t9g-Hc-UhD"/>
-                            <constraint firstItem="aSW-FG-pHS" firstAttribute="leading" secondItem="050-35-eS9" secondAttribute="leading" constant="33" id="xcv-8c-NUz"/>
+                            <constraint firstItem="cRE-tx-deS" firstAttribute="top" secondItem="lAn-8U-49q" secondAttribute="bottom" constant="38" id="UJM-ah-Yc6"/>
+                            <constraint firstItem="lAn-8U-49q" firstAttribute="top" secondItem="ybH-b3-29B" secondAttribute="bottom" constant="18" id="ZT9-ha-Ttq"/>
+                            <constraint firstItem="050-35-eS9" firstAttribute="trailing" secondItem="cRE-tx-deS" secondAttribute="trailing" constant="21" id="eVI-Ce-09w"/>
+                            <constraint firstItem="YeN-9z-pi4" firstAttribute="top" secondItem="050-35-eS9" secondAttribute="top" constant="65" id="oGn-zW-LvF"/>
+                            <constraint firstItem="050-35-eS9" firstAttribute="trailing" secondItem="lAn-8U-49q" secondAttribute="trailing" constant="32" id="q0O-SL-1B2"/>
+                            <constraint firstItem="lAn-8U-49q" firstAttribute="leading" secondItem="050-35-eS9" secondAttribute="leading" constant="32" id="vbg-Xg-1CS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="37u-Ci-TxC"/>
@@ -469,18 +482,13 @@
     </scenes>
     <resources>
         <image name="Coin Illustration" width="364" height="318.5"/>
-        <image name="Coin text" width="320.5" height="104.5"/>
         <image name="Discover Home." width="126" height="13.5"/>
         <image name="australia map" width="323.5" height="309"/>
-        <image name="done" width="51" height="15"/>
         <image name="donebtn" width="371" height="55"/>
         <image name="eye.fill" catalog="system" width="128" height="78"/>
         <image name="logo" width="276" height="189.5"/>
         <image name="map with human" width="414" height="317.5"/>
         <image name="navigation" width="323.5" height="269.5"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
