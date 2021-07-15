@@ -93,7 +93,7 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
     }
     
     private func showSignIn() {
-        let signInViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignInViewController")
+        let signInViewController = UIStoryboard.main.instantiateViewController(identifier: "SignInViewController")
         if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
             window.rootViewController = signInViewController
             UIView.transition(with: window,

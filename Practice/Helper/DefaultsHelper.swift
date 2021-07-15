@@ -11,13 +11,22 @@ class DefaultsHelper {
     
     enum Key: String {
         case onboardingSeen
+        case logedIn
     }
     
     var isOnboardingSeen: Bool {
         UserDefaults.standard.bool(forKey: Key.onboardingSeen.rawValue)
     }
     
+    var isLogedIn: Bool {
+        UserDefaults.standard.bool(forKey: Key.logedIn.rawValue)
+    }
+    
     func setOnboarding(isSeen: Bool) {
         UserDefaults.standard.set(isSeen, forKey: Key.onboardingSeen.rawValue)
+    }
+    
+    func setLogin(isSeen: Bool) {
+        UserDefaults.standard.setValue(isSeen, forKey: Key.logedIn.rawValue)
     }
 }

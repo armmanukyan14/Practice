@@ -436,6 +436,9 @@
                                 <state key="normal" title="Done" backgroundImage="donebtn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="n0p-ff-Oy9" eventType="touchUpInside" id="Nuk-nZ-vyA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Coins are securely stashed in your Vault." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ybH-b3-29B">
                                 <rect key="frame" x="45" y="472" width="324" height="44"/>
