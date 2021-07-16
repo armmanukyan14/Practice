@@ -15,6 +15,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var haventAccount: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
     
     // MARK: - Actions
     @IBAction func eyeButtonTapped(_ sender: UIButton) {
@@ -24,11 +25,15 @@ class SignInViewController: UIViewController {
             password.isSecureTextEntry = true
         }
     }
-    
+
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainScreenViewController")
-        guard email.text?.isValidEmail == true else { return }
-        navigationController?.setViewControllers([vc], animated: true)
+        if email.text?.isValidEmail == true, password.text != "" {
+            let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainScreenViewController")
+            navigationController?.setViewControllers([vc], animated: true)
+        } else {
+            emailErrorLabel.isHidden = false
+            emailErrorLabel.text = "invalid email!"
+        }       
     }
     
     // MARK: - View Lifecycle
@@ -37,6 +42,7 @@ class SignInViewController: UIViewController {
         changeTextFields()
         changeBackground()
         haventAccount.textColor = .white
+        emailErrorLabel.isHidden = true
     }
     
     // MARK: - Methods

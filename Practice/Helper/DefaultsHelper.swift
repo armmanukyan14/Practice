@@ -9,6 +9,8 @@ import Foundation
 
 class DefaultsHelper {
     
+    let standard = UserDefaults.standard
+    
     enum Key: String {
         case onboardingSeen
         case logedIn
@@ -27,6 +29,6 @@ class DefaultsHelper {
     }
     
     func setLogin(isSeen: Bool) {
-        UserDefaults.standard.setValue(isSeen, forKey: Key.logedIn.rawValue)
+        UserDefaults.standard.set(isSeen, forKey: Key.logedIn.rawValue)
     }
 }
