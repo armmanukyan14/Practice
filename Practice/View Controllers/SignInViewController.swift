@@ -9,6 +9,8 @@ import UIKit
 
 class SignInViewController: UIViewController {
     
+    let defaultsHelper = DefaultsHelper()
+    
     // MARK: - Outlets
     @IBOutlet weak var eyeButton: UIButton!
     @IBOutlet weak var password: UITextField!
@@ -27,6 +29,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func signInButtonTapped(_ sender: UIButton) {
+        defaultsHelper.setLogin(isSeen: true)
         if email.text?.isValidEmail == true, password.text != "" {
             let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainScreenViewController")
             navigationController?.setViewControllers([vc], animated: true)

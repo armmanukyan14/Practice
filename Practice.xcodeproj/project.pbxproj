@@ -17,7 +17,7 @@
 		554D6281268E164400EC8F5E /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6280268E164400EC8F5E /* SecondPageViewController.swift */; };
 		554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */; };
 		554E6902269C095F00076BC5 /* UIStoryboard + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */; };
-		554F5B6C26A19E64006906A8 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554F5B6B26A19E64006906A8 /* MenuTableViewController.swift */; };
+		554F5B6C26A19E64006906A8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554F5B6B26A19E64006906A8 /* MenuViewController.swift */; };
 		5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552E27726983573002B81CE /* DefaultsHelper.swift */; };
 		555782FB26A044B400B964FA /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555782FA26A044B400B964FA /* String + Ext.swift */; };
 		5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5558E339269EB7C700E56C23 /* UIColor + Ext.swift */; };
@@ -40,7 +40,7 @@
 		554D6280268E164400EC8F5E /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
 		554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
 		554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard + Ext.swift"; sourceTree = "<group>"; };
-		554F5B6B26A19E64006906A8 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		554F5B6B26A19E64006906A8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5552E27726983573002B81CE /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHelper.swift; sourceTree = "<group>"; };
 		555782FA26A044B400B964FA /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		5558E339269EB7C700E56C23 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				554D627D268E160400EC8F5E /* FirstPageViewController.swift */,
-				554F5B6B26A19E64006906A8 /* MenuTableViewController.swift */,
+				554F5B6B26A19E64006906A8 /* MenuViewController.swift */,
 				553AE60C269C7C0100156F5F /* MainScreenViewController.swift */,
 				554D6280268E164400EC8F5E /* SecondPageViewController.swift */,
 				554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */,
@@ -290,7 +290,7 @@
 				55F2DB8C268B55F300D2C3BA /* AppDelegate.swift in Sources */,
 				5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */,
 				554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */,
-				554F5B6C26A19E64006906A8 /* MenuTableViewController.swift in Sources */,
+				554F5B6C26A19E64006906A8 /* MenuViewController.swift in Sources */,
 				55F2DB8E268B55F300D2C3BA /* SceneDelegate.swift in Sources */,
 				553AE606269C168900156F5F /* OnboardingViewController.swift in Sources */,
 				553AE60D269C7C0100156F5F /* MainScreenViewController.swift in Sources */,
