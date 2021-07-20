@@ -19,6 +19,7 @@
 		554E6902269C095F00076BC5 /* UIStoryboard + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */; };
 		554F5B6C26A19E64006906A8 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554F5B6B26A19E64006906A8 /* MenuViewController.swift */; };
 		5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552E27726983573002B81CE /* DefaultsHelper.swift */; };
+		5555B11D26A6FA9C00ECE82E /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555B11C26A6FA9C00ECE82E /* SlideInTransition.swift */; };
 		555782FB26A044B400B964FA /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555782FA26A044B400B964FA /* String + Ext.swift */; };
 		5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5558E339269EB7C700E56C23 /* UIColor + Ext.swift */; };
 		555A2E08268C47C300866F1A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 555A2E07268C47C300866F1A /* .gitignore */; };
@@ -42,6 +43,7 @@
 		554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard + Ext.swift"; sourceTree = "<group>"; };
 		554F5B6B26A19E64006906A8 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5552E27726983573002B81CE /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHelper.swift; sourceTree = "<group>"; };
+		5555B11C26A6FA9C00ECE82E /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		555782FA26A044B400B964FA /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
 		5558E339269EB7C700E56C23 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		555A2E07268C47C300866F1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				55F2DB99268B55F400D2C3BA /* Info.plist */,
 				554CC9E5269F1FFD00144BE0 /* Fonts */,
 				5552E2742698333E002B81CE /* View Controllers */,
+				5555B11C26A6FA9C00ECE82E /* SlideInTransition.swift */,
 				5552E27326983310002B81CE /* Helper */,
 				555A2E06268C479500866F1A /* Git */,
 			);
@@ -291,6 +294,7 @@
 				5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */,
 				554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */,
 				554F5B6C26A19E64006906A8 /* MenuViewController.swift in Sources */,
+				5555B11D26A6FA9C00ECE82E /* SlideInTransition.swift in Sources */,
 				55F2DB8E268B55F300D2C3BA /* SceneDelegate.swift in Sources */,
 				553AE606269C168900156F5F /* OnboardingViewController.swift in Sources */,
 				553AE60D269C7C0100156F5F /* MainScreenViewController.swift in Sources */,

@@ -7,10 +7,23 @@
 
 import UIKit
 
-class MenuViewController: UITableViewController {
+enum MenuType: Int {
+    case users
+    case contacts
+    case pictures
+}
 
+class MenuViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let menuType = MenuType(rawValue: indexPath.row) else { return }
+        dismiss(animated: true) {
+            print("Dismissing: \(menuType)")
+        }
     }
 }
 
