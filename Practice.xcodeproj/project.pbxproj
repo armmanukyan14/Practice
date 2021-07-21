@@ -11,6 +11,10 @@
 		553AE606269C168900156F5F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AE605269C168900156F5F /* OnboardingViewController.swift */; };
 		553AE60A269C181700156F5F /* LastPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AE609269C181700156F5F /* LastPageViewController.swift */; };
 		553AE60D269C7C0100156F5F /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553AE60C269C7C0100156F5F /* MainScreenViewController.swift */; };
+		554C223A26A821E1007108CF /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C223926A821E1007108CF /* SignInViewModel.swift */; };
+		554C223E26A821FA007108CF /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C223D26A821FA007108CF /* OnboardingViewModel.swift */; };
+		554C224126A8220B007108CF /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C224026A8220B007108CF /* MainScreenViewModel.swift */; };
+		554C224426A82220007108CF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554C224326A82220007108CF /* MenuViewModel.swift */; };
 		554CC9E7269F20D400144BE0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554CC9E6269F20D400144BE0 /* OpenSans-Regular.ttf */; };
 		554CC9EA269F213700144BE0 /* Futura Bold font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 554CC9E9269F213700144BE0 /* Futura Bold font.ttf */; };
 		554D627E268E160400EC8F5E /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554D627D268E160400EC8F5E /* FirstPageViewController.swift */; };
@@ -35,6 +39,10 @@
 		553AE605269C168900156F5F /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		553AE609269C181700156F5F /* LastPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageViewController.swift; sourceTree = "<group>"; };
 		553AE60C269C7C0100156F5F /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		554C223926A821E1007108CF /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		554C223D26A821FA007108CF /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		554C224026A8220B007108CF /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		554C224326A82220007108CF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		554CC9E6269F20D400144BE0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		554CC9E9269F213700144BE0 /* Futura Bold font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Futura Bold font.ttf"; sourceTree = "<group>"; };
 		554D627D268E160400EC8F5E /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +88,42 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		554C223226A80D62007108CF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				55F2DB8F268B55F300D2C3BA /* SignInViewController.swift */,
+				554C223926A821E1007108CF /* SignInViewModel.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		554C223326A81C1E007108CF /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				553AE605269C168900156F5F /* OnboardingViewController.swift */,
+				554C223D26A821FA007108CF /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		554C223426A81C2E007108CF /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				553AE60C269C7C0100156F5F /* MainScreenViewController.swift */,
+				554C224026A8220B007108CF /* MainScreenViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		554C223526A81C32007108CF /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				554F5B6B26A19E64006906A8 /* MenuViewController.swift */,
+				554C224326A82220007108CF /* MenuViewModel.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		554CC9E5269F1FFD00144BE0 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +147,14 @@
 		5552E2742698333E002B81CE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				554C223526A81C32007108CF /* Menu */,
+				554C223426A81C2E007108CF /* MainScreen */,
+				554C223326A81C1E007108CF /* Onboarding */,
+				554C223226A80D62007108CF /* SignIn */,
 				554D627D268E160400EC8F5E /* FirstPageViewController.swift */,
-				554F5B6B26A19E64006906A8 /* MenuViewController.swift */,
-				553AE60C269C7C0100156F5F /* MainScreenViewController.swift */,
 				554D6280268E164400EC8F5E /* SecondPageViewController.swift */,
 				554D6283268E165F00EC8F5E /* ThirdPageViewController.swift */,
 				553AE609269C181700156F5F /* LastPageViewController.swift */,
-				55F2DB8F268B55F300D2C3BA /* SignInViewController.swift */,
-				553AE605269C168900156F5F /* OnboardingViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -288,11 +332,15 @@
 				554E6902269C095F00076BC5 /* UIStoryboard + Ext.swift in Sources */,
 				555782FB26A044B400B964FA /* String + Ext.swift in Sources */,
 				554D627E268E160400EC8F5E /* FirstPageViewController.swift in Sources */,
+				554C224426A82220007108CF /* MenuViewModel.swift in Sources */,
 				5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */,
+				554C223A26A821E1007108CF /* SignInViewModel.swift in Sources */,
+				554C224126A8220B007108CF /* MainScreenViewModel.swift in Sources */,
 				55F2DB90268B55F300D2C3BA /* SignInViewController.swift in Sources */,
 				55F2DB8C268B55F300D2C3BA /* AppDelegate.swift in Sources */,
 				5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */,
 				554D6284268E165F00EC8F5E /* ThirdPageViewController.swift in Sources */,
+				554C223E26A821FA007108CF /* OnboardingViewModel.swift in Sources */,
 				554F5B6C26A19E64006906A8 /* MenuViewController.swift in Sources */,
 				5555B11D26A6FA9C00ECE82E /* SlideInTransition.swift in Sources */,
 				55F2DB8E268B55F300D2C3BA /* SceneDelegate.swift in Sources */,
