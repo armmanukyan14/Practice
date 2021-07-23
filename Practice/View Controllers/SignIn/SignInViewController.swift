@@ -69,7 +69,7 @@ class SignInViewController: UIViewController {
     }
     
     func changeTextFields() {
-        email.layer.cornerRadius = 24.0
+        email.layer.cornerRadius = 22.0
         email.layer.borderWidth = 1.0
         email.layer.borderColor = UIColor.borderColor.cgColor
         let emailPadding = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.email.frame.height))
@@ -79,7 +79,7 @@ class SignInViewController: UIViewController {
         email.textColor = UIColor.textColor
         email.attributedPlaceholder = NSAttributedString(string: "E-mail",
                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor])
-        password.layer.cornerRadius = 24.0
+        password.layer.cornerRadius = 22.0
         password.layer.borderWidth = 1.0
         password.layer.borderColor = UIColor.borderColor.cgColor
         let passwordPadding = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.password.frame.height))
