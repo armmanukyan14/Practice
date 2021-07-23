@@ -21,10 +21,10 @@ class MenuViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let menuType = MenuType(rawValue: indexPath.row) else { return }
-        dismiss(animated: true) {
-            print("Dismissing: \(menuType)")
-        }
+        dismiss(animated: true)
+        print("Dismissed: \(menuType)")
     }
-}
+    }
+
 
     

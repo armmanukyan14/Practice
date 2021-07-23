@@ -46,9 +46,16 @@ class SignInViewController: UIViewController {
         changeBackground()
         haventAccount.textColor = .white
         emailErrorLabel.isHidden = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+            view.addGestureRecognizer(tap)
     }
     
     // MARK: - Methods
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     func changeBackground() {
         let background = UIImage(named: "signin")
         var imageView : UIImageView!
