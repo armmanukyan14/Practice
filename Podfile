@@ -8,5 +8,6 @@ target 'Practice' do
 pod 'SDWebImage', '~> 5.0'
 pod 'RxSwift', '~> 6.0'
 pod 'RxCocoa', '~> 6.0'
+pod 'Alamofire', '~> 5.4'
 
 end

@@ -66,7 +66,6 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
     private func didTapDarkView() {
         toVC.dismiss(animated: true)
     }
-    
 }
 
 
