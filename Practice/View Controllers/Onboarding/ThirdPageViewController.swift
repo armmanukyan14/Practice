@@ -25,7 +25,7 @@ class ThirdPageViewController: UIViewController {
     // MARK: - Methods
     func makeColorfulLabel() {
         colorfulString = NSMutableAttributedString(string: labelText as String, attributes: [NSAttributedString.Key.font:UIFont(name: "Open Sans", size: 16.0)!])
-        colorfulString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.tripYellow.self, range: NSRange(location:0,length:9))
+        colorfulString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.onboardingYellow.self, range: NSRange(location:0,length:9))
         colorfulLabel.attributedText = colorfulString
     }
 }

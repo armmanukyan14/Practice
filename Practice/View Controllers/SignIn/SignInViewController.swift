@@ -6,55 +6,135 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxGesture
 
-class SignInViewController: UIViewController {
+final class SignInViewController: UIViewController {
     
-    let defaultsHelper = DefaultsHelper()
+    // MARK: - Properties
+    
+    private let defaultsHelper = DefaultsHelper()
+    private let viewModel = SignInViewModel()
+    private let disposeBag = DisposeBag()
+    
+    private lazy var eyeButton: UIButton = {
+        let eyeButton = UIButton()
+        eyeButton.tintColor = UIColor.textFieldBorderColor
+        let eyeImage = UIImage(systemName: "eye")
+        eyeButton.setImage(eyeImage, for: .normal)
+        return eyeButton
+    }()
     
     // MARK: - Outlets
-    @IBOutlet weak var eyeButton: UIButton!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var haventAccount: UILabel!
-    @IBOutlet weak var emailErrorLabel: UILabel!
     
-    // MARK: - Actions
-    @IBAction func eyeButtonTapped(_ sender: UIButton) {
-        if password.isSecureTextEntry == true {
-            password.isSecureTextEntry = false
-        } else {
-            password.isSecureTextEntry = true
-        }
-    }
-
-    @IBAction func signInButtonTapped(_ sender: UIButton) {
-        defaultsHelper.setLogin(isSeen: true)
-        if email.text?.isValidEmail == true, password.text != "" {
-            let vc = UIStoryboard.main.instantiateViewController(withIdentifier: "MainScreenViewController")
-            navigationController?.setViewControllers([vc], animated: true)
-        } else {
-            emailErrorLabel.isHidden = false
-            emailErrorLabel.text = "invalid email!"
-        }       
-    }
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var haventAccountLabel: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var passwordErrorLabel: UILabel!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeTextFields()
-        changeBackground()
-        haventAccount.textColor = .white
-        emailErrorLabel.isHidden = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-            view.addGestureRecognizer(tap)
+        doBindings()
+        setupTextFields()
+        setupLabels()
+        addEyeButton()
+        changeBackground()  
+        hideErrorLabels()
+        closeKeyboardWhenTapped()
+    }
+    
+    // MARK: - Reactive
+    
+    
+    private func doBindings() {
+        bindOutputs()
+        bindInputs()
+        bindNavigation()
+        bindUI()
+    }
+    
+    private func bindUI() {
+        eyeButton.rx.tap.asDriver()
+            .drive(onNext: { [weak self] _ in
+                let isSelected = self?.eyeButton.tintColor == .gray
+                self?.eyeButton.tintColor = isSelected ? UIColor.textFieldBorderColor : .gray
+                self?.passwordTextField.isSecureTextEntry = isSelected
+            })
+            .disposed(by: disposeBag)
+        
+        view.rx.tapGesture().when(.recognized).asDriver(onErrorDriveWith: .never())
+            .drive(onNext: { [weak self] _ in
+                self?.view.endEditing(true)
+            })
+            .disposed(by: disposeBag)
+        
+        
+    }
+    
+    private func bindInputs() {
+        emailTextField.rx.text.orEmpty
+            .bind(to: viewModel.email)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text.orEmpty
+            .bind(to: viewModel.password)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindOutputs() {
+        viewModel.emailError.skip(1)
+            .subscribe(onNext: { [weak self] error in
+                if let error = error {
+                    self?.emailErrorLabel.text = error
+                    self?.emailErrorLabel.isHidden = false
+                } else {
+                    self?.emailErrorLabel.isHidden = true
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.passwordError.skip(1)
+            .subscribe(onNext: { [weak self] error in
+                if let error = error {
+                    self?.passwordErrorLabel.text = error
+                    self?.passwordErrorLabel.isHidden = false
+                } else {
+                    self?.passwordErrorLabel.isHidden = true
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.isSignInEnabled
+            .bind(to: signInButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+    }
+    
+    private func bindNavigation() {
+        signInButton.rx.tap
+            .do(onNext: { [weak self] in
+                self?.defaultsHelper.setLogin(isSeen: true)
+            })
+            .subscribe(onNext: { [weak self] in
+                let mainScreenViewController = UIStoryboard.main.instantiateViewController(withIdentifier: "MainScreenViewController")
+                self?.navigationController?.setViewControllers([mainScreenViewController], animated: true)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func closeKeyboardWhenTapped() {
+        let tapBackground = UITapGestureRecognizer()
+        view.addGestureRecognizer(tapBackground)
+        tapBackground.rx.event.subscribe(onNext: { [weak self] _ in
+            self?.view.endEditing(true)
+        })
+        .disposed(by: disposeBag)
     }
     
     // MARK: - Methods
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
     
     func changeBackground() {
         let background = UIImage(named: "signin")
@@ -68,31 +148,46 @@ class SignInViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     
-    func changeTextFields() {
-        email.layer.cornerRadius = 24.0
-        email.layer.borderWidth = 1.0
-        email.layer.borderColor = UIColor.borderColor.cgColor
-        let emailPadding = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.email.frame.height))
-        email.leftView = emailPadding
-        email.leftViewMode = .always
-        email.tintColor = UIColor.textColor
-        email.textColor = UIColor.textColor
-        email.attributedPlaceholder = NSAttributedString(string: "E-mail",
-                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor])
-        password.layer.cornerRadius = 24.0
-        password.layer.borderWidth = 1.0
-        password.layer.borderColor = UIColor.borderColor.cgColor
-        let passwordPadding = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.password.frame.height))
-        password.leftView = passwordPadding
-        password.leftViewMode = .always
-        password.addSubview(eyeButton)
-        password.rightView = eyeButton
+    func setupTextFields() {
+        emailTextField.layer.cornerRadius = 24.0
+        emailTextField.layer.borderWidth = 1.0
+        emailTextField.layer.borderColor = UIColor.textFieldBorderColor.cgColor
+        let emailPadding = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.emailTextField.frame.height))
+        emailTextField.leftView = emailPadding
+        emailTextField.leftViewMode = .always
+        emailTextField.tintColor = UIColor.textColor
+        emailTextField.textColor = UIColor.textColor
+        emailTextField.attributedPlaceholder = NSAttributedString(
+            string: "E-mail",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor])
+        passwordTextField.layer.cornerRadius = 24.0
+        passwordTextField.layer.borderWidth = 1.0
+        passwordTextField.layer.borderColor = UIColor.textFieldBorderColor.cgColor
+        let passwordPadding = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.passwordTextField.frame.height))
+        passwordTextField.leftView = passwordPadding
+        passwordTextField.leftViewMode = .always
+        passwordTextField.tintColor = UIColor.textColor
+        passwordTextField.textColor = UIColor.textColor
+        passwordTextField.attributedPlaceholder = NSAttributedString(
+            string: "Password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor])
+    }
+    
+    func setupLabels() {
+        haventAccountLabel.textColor = .white
+        emailErrorLabel.textColor = UIColor.errorLabelColor
+        passwordErrorLabel.textColor = UIColor.errorLabelColor
+    }
+    
+    func addEyeButton() {
+        passwordTextField.rightView = eyeButton
+        passwordTextField.rightViewMode = .always
         eyeButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
-        password.rightViewMode = .always
-        password.tintColor = UIColor.textColor
-        password.textColor = UIColor.textColor
-        password.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.placeholderColor])
+    }
+    
+    func hideErrorLabels() {
+        emailErrorLabel.isHidden = true
+        passwordErrorLabel.isHidden = true
     }
 }
 

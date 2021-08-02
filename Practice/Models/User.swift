@@ -13,14 +13,3 @@ struct User: Decodable {
     let username: String
     let email: String
 }
-
-extension User {
-    static var example: [Self] = {
-       [
-        .init(id: 1, username: "arman", email: "arman@gmail.com"),
-        .init(id: 1, username: "arman", email: "arman@gmail.com"),
-        .init(id: 1, username: "arman", email: "arman@gmail.com"),
-        .init(id: 1, username: "arman", email: "arman@gmail.com")
-       ]
-    }()
-}

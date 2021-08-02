@@ -20,7 +20,7 @@ class DefaultsHelper {
         UserDefaults.standard.bool(forKey: Key.onboardingSeen.rawValue)
     }
     
-    var isLogedIn: Bool {
+    var isLoggedIn: Bool {
         UserDefaults.standard.bool(forKey: Key.logedIn.rawValue)
     }
     
