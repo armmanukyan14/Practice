@@ -24,6 +24,7 @@
 		554F8D4B26B7EDD900A4BE33 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554F8D4A26B7EDD900A4BE33 /* UsersViewModel.swift */; };
 		554F8D4E26B7F3CE00A4BE33 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554F8D4D26B7F3CE00A4BE33 /* UsersService.swift */; };
 		5550145A26AFDE2B00B71141 /* NavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5550145926AFDE2B00B71141 /* NavigationBarViewController.swift */; };
+		5552CB1F26B959220083FE6E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552CB1E26B959220083FE6E /* Contact.swift */; };
 		5552E27826983573002B81CE /* DefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552E27726983573002B81CE /* DefaultsHelper.swift */; };
 		555377C626B1765E002124AE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555377C526B1765E002124AE /* User.swift */; };
 		555377CC26B17A71002124AE /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555377CB26B17A71002124AE /* UserCell.swift */; };
@@ -31,6 +32,9 @@
 		5555C25C26B2DC3D006728B9 /* URL + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5555C25B26B2DC3D006728B9 /* URL + Ext.swift */; };
 		5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5558E339269EB7C700E56C23 /* UIColor + Ext.swift */; };
 		555A2E08268C47C300866F1A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 555A2E07268C47C300866F1A /* .gitignore */; };
+		5563397126BA5DFA003DEBCE /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563397026BA5DFA003DEBCE /* ContactsViewModel.swift */; };
+		5563397426BA63B5003DEBCE /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563397326BA63B5003DEBCE /* ContactTableViewCell.swift */; };
+		5563397726BA6573003DEBCE /* UITableViewCell + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5563397626BA6573003DEBCE /* UITableViewCell + Ext.swift */; };
 		55D6860D26AAA81400B8963E /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6860C26AAA81400B8963E /* UsersViewController.swift */; };
 		55D6861026AAA98300B8963E /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6860F26AAA98300B8963E /* ContactsViewController.swift */; };
 		55D6861326AAA9A500B8963E /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D6861226AAA9A500B8963E /* PicturesViewController.swift */; };
@@ -59,6 +63,7 @@
 		554F8D4A26B7EDD900A4BE33 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		554F8D4D26B7F3CE00A4BE33 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
 		5550145926AFDE2B00B71141 /* NavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarViewController.swift; sourceTree = "<group>"; };
+		5552CB1E26B959220083FE6E /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5552E27726983573002B81CE /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHelper.swift; sourceTree = "<group>"; };
 		555377C526B1765E002124AE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		555377CB26B17A71002124AE /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		5555C25B26B2DC3D006728B9 /* URL + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Ext.swift"; sourceTree = "<group>"; };
 		5558E339269EB7C700E56C23 /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 		555A2E07268C47C300866F1A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5563397026BA5DFA003DEBCE /* ContactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewModel.swift; sourceTree = "<group>"; };
+		5563397326BA63B5003DEBCE /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		5563397626BA6573003DEBCE /* UITableViewCell + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + Ext.swift"; sourceTree = "<group>"; };
 		55D6860C26AAA81400B8963E /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		55D6860F26AAA98300B8963E /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		55D6861226AAA9A500B8963E /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 		554F8D5C26B8031E00A4BE33 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5563397326BA63B5003DEBCE /* ContactTableViewCell.swift */,
 				555377CB26B17A71002124AE /* UserCell.swift */,
 			);
 			path = Cells;
@@ -189,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				55D6860F26AAA98300B8963E /* ContactsViewController.swift */,
+				5563397026BA5DFA003DEBCE /* ContactsViewModel.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -211,6 +221,7 @@
 				554E6901269C095F00076BC5 /* UIStoryboard + Ext.swift */,
 				5558E339269EB7C700E56C23 /* UIColor + Ext.swift */,
 				5555C25B26B2DC3D006728B9 /* URL + Ext.swift */,
+				5563397626BA6573003DEBCE /* UITableViewCell + Ext.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -224,7 +235,6 @@
 				554C223326A81C1E007108CF /* Onboarding */,
 				554C223226A80D62007108CF /* SignIn */,
 				554F8D5A26B802C400A4BE33 /* Users */,
-				554F8D5B26B802E400A4BE33 /* Service */,
 				554F8D5C26B8031E00A4BE33 /* Cells */,
 				554F8D5E26B8035E00A4BE33 /* Pictures */,
 				554F8D5F26B8036100A4BE33 /* Contacts */,
@@ -236,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				555377C526B1765E002124AE /* User.swift */,
+				5552CB1E26B959220083FE6E /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 				55F2DB99268B55F400D2C3BA /* Info.plist */,
 				5550145C26AFE15700B71141 /* System */,
 				554CC9E5269F1FFD00144BE0 /* Fonts */,
+				554F8D5B26B802E400A4BE33 /* Service */,
 				555377C426B17620002124AE /* Models */,
 				5552E2742698333E002B81CE /* View Controllers */,
 				5552E27326983310002B81CE /* Helpers */,
@@ -406,10 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5552CB1F26B959220083FE6E /* Contact.swift in Sources */,
 				554E6902269C095F00076BC5 /* UIStoryboard + Ext.swift in Sources */,
 				554F8D4B26B7EDD900A4BE33 /* UsersViewModel.swift in Sources */,
 				554D627E268E160400EC8F5E /* FirstPageViewController.swift in Sources */,
 				554C224426A82220007108CF /* MenuViewModel.swift in Sources */,
+				5563397726BA6573003DEBCE /* UITableViewCell + Ext.swift in Sources */,
 				5558E33A269EB7C700E56C23 /* UIColor + Ext.swift in Sources */,
 				5555C25C26B2DC3D006728B9 /* URL + Ext.swift in Sources */,
 				554C223A26A821E1007108CF /* SignInViewModel.swift in Sources */,
@@ -422,6 +436,7 @@
 				555377CC26B17A71002124AE /* UserCell.swift in Sources */,
 				554F5B6C26A19E64006906A8 /* MenuViewController.swift in Sources */,
 				5555B11D26A6FA9C00ECE82E /* SlideInTransition.swift in Sources */,
+				5563397126BA5DFA003DEBCE /* ContactsViewModel.swift in Sources */,
 				55D6861326AAA9A500B8963E /* PicturesViewController.swift in Sources */,
 				555377C626B1765E002124AE /* User.swift in Sources */,
 				55F2DB8E268B55F300D2C3BA /* SceneDelegate.swift in Sources */,
@@ -432,6 +447,7 @@
 				554D6281268E164400EC8F5E /* SecondPageViewController.swift in Sources */,
 				553AE60A269C181700156F5F /* LastPageViewController.swift in Sources */,
 				5550145A26AFDE2B00B71141 /* NavigationBarViewController.swift in Sources */,
+				5563397426BA63B5003DEBCE /* ContactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

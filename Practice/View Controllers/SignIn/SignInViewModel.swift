@@ -25,6 +25,7 @@ class SignInViewModel {
     let isSignInEnabled = BehaviorRelay(value: false)
     
     // MARK: - Init
+    
     init() {
         doBindings()
     }
