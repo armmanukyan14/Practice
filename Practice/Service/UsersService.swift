@@ -6,16 +6,16 @@
 //
 
 import Foundation
-import RxSwift
 import RxAlamofire
+import RxSwift
 
 class UsersService {
     static let shared = UsersService()
     private init() {}
-    
+
     func getUsers() -> Observable<[User]> {
         RxAlamofire.request(.get, URL.usersURL)
-            .validate(statusCode: 200..<300)
+            .validate(statusCode: 200 ..< 300)
             .data()
             .compactMap { data in
                 let decoder = JSONDecoder()
@@ -24,7 +24,4 @@ class UsersService {
                 return users
             }
     }
-//    func getAlbums(for userID: Int) -> Observable<[Album]> {
-//        let url = "https......"
-//    }
 }

@@ -462,6 +462,62 @@
             </objects>
             <point key="canvasLocation" x="832" y="-650"/>
         </scene>
+        <!--Albums View Controller-->
+        <scene sceneID="Tms-Hf-2hR">
+            <objects>
+                <viewController storyboardIdentifier="AlbumsViewController" id="cYi-qf-X16" customClass="AlbumsViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h2b-Pu-7tn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5CP-pv-e7A">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlbumCell" rowHeight="60" id="7rh-TR-KeH" customClass="AlbumCell" customModule="Practice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7rh-TR-KeH" id="rOH-vP-Aug">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ6-iK-Zay">
+                                                    <rect key="frame" x="36" y="19" width="42" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oQ6-iK-Zay" firstAttribute="leading" secondItem="rOH-vP-Aug" secondAttribute="leadingMargin" constant="16" id="D5d-h3-ZJF"/>
+                                                <constraint firstItem="oQ6-iK-Zay" firstAttribute="top" secondItem="rOH-vP-Aug" secondAttribute="topMargin" constant="8" id="RKU-cF-aHl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oQ6-iK-Zay" secondAttribute="bottom" constant="8" id="eHJ-h7-9Qc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumTitleLabel" destination="oQ6-iK-Zay" id="E2v-yS-A1B"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zx3-HB-4c3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zx3-HB-4c3" firstAttribute="bottom" secondItem="5CP-pv-e7A" secondAttribute="bottom" id="GFe-hX-cr1"/>
+                            <constraint firstItem="zx3-HB-4c3" firstAttribute="trailing" secondItem="5CP-pv-e7A" secondAttribute="trailing" id="JnE-cR-loH"/>
+                            <constraint firstItem="5CP-pv-e7A" firstAttribute="top" secondItem="zx3-HB-4c3" secondAttribute="top" id="RHj-wJ-ydc"/>
+                            <constraint firstItem="5CP-pv-e7A" firstAttribute="leading" secondItem="zx3-HB-4c3" secondAttribute="leading" id="yZt-6U-6c4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="5CP-pv-e7A" id="Ed5-2L-MtT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20l-fF-hdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="-1371.4285714285713"/>
+        </scene>
         <!--Contacts View Controller-->
         <scene sceneID="p43-Zy-1kt">
             <objects>

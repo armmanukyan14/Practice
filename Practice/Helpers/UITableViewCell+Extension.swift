@@ -1,5 +1,5 @@
 //
-//  UITableViewCell + Ext.swift
+//  UITableViewCell+Extension.swift
 //  Practice
 //
 //  Created by Cypress on 8/4/21.

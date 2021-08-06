@@ -1,5 +1,5 @@
 //
-//  UIStoryboard + extension.swift
+//  UIStoryboard+Extension.swift
 //  Practice
 //
 //  Created by Cypress on 7/12/21.

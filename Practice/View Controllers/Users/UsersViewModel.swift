@@ -6,21 +6,20 @@
 //
 
 import Foundation
-import RxSwift
 import RxRelay
+import RxSwift
 
 final class UsersViewModel {
-    
     let disposeBag = DisposeBag()
-    
+
     let refresh = PublishRelay<Void>()
-    
+
     let users = PublishRelay<[User]>()
-    
+
     init() {
         doBindings()
     }
-    
+
     private func doBindings() {
         refresh
             .flatMapLatest {

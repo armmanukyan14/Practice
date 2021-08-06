@@ -5,29 +5,28 @@
 //  Created by Cypress on 8/4/21.
 //
 
-import RxSwift
-import RxRelay
 import Contacts
+import RxRelay
+import RxSwift
 
 final class ContactsViewModel {
-  
     // MARK: - Properties
-    
+
     private let disposeBag = DisposeBag()
     private let contactStore = CNContactStore()
-    
+
     // MARK: - Inputs
-    
+
     let refresh = PublishRelay<Void>()
-    
+
     // MARK: - Outputs
-    
+
     let contacts = PublishRelay<[Contact]>()
-    
+
     init() {
         doBindings()
     }
-    
+
     // MARK: - Methods
 
     private func doBindings() {
@@ -35,15 +34,15 @@ final class ContactsViewModel {
             .compactMap { [weak self] in
                 self?.fetchContacts()
             }
-            .map { $0.filter { !($0.email?.isEmpty ??  true) } }
+            .map { $0.filter { !($0.email?.isEmpty ?? true) } }
             .bind(to: contacts)
             .disposed(by: disposeBag)
     }
-    
+
     func fetchContacts() -> [Contact]? {
         let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey] as [CNKeyDescriptor]
         do {
-            return try self.contactStore.containers(matching: nil)
+            return try contactStore.containers(matching: nil)
                 .flatMap { container -> [Contact] in
                     let predicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
                     let results = try self.contactStore.unifiedContacts(matching: predicate, keysToFetch: keys)

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class MainScreenViewController: NavigationBarViewController {
-        
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class OnboardingViewController: UIViewController {
-    
-    //MARK: - Properties
+    // MARK: - Properties
+
     var currentIndex = 0
     var pageViewController: UIPageViewController!
     private let defaultsHelper = DefaultsHelper()
@@ -18,12 +18,14 @@ class OnboardingViewController: UIViewController {
                                            "SecondPageViewController",
                                            "ThirdPageViewController",
                                            "LastPageViewController")
-    
+
     // MARK: - Outlets
-    @IBOutlet weak var skipButton: UIButton!
+
+    @IBOutlet var skipButton: UIButton!
     @IBOutlet var pageControl: UIPageControl!
-    
+
     // MARK: - Actions
+
     @IBAction func pageControl(_ sender: UIPageControl) {
         let direction: UIPageViewController.NavigationDirection = pageControl.currentPage > currentIndex ? .forward : .reverse
         guard pageControl.currentPage >= 0, pageControl.currentPage <= pages.count else { return }
@@ -31,14 +33,15 @@ class OnboardingViewController: UIViewController {
         currentIndex = pageControl.currentPage
         hideSkip()
     }
-    
+
     @IBAction func skipButtonTapped(_ sender: UIButton) {
         defaultsHelper.setOnboarding(isSeen: true)
         let signInVC = UIStoryboard.main.instantiateViewController(withIdentifier: "SignInViewController")
         navigationController?.setViewControllers([signInVC], animated: true)
     }
-    
+
     // MARK: - View Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         pageViewController.setViewControllers([pages[0]], direction: .forward, animated: false)
@@ -47,24 +50,25 @@ class OnboardingViewController: UIViewController {
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0
     }
-    
+
     // MARK: - Methods
+
     private func getPageViewController(identifiers: String...) -> [UIViewController] {
         identifiers.compactMap { identifier in
             storyboard?.instantiateViewController(identifier: identifier)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let pageViewController = segue.destination as? UIPageViewController {
             self.pageViewController = pageViewController
         }
     }
-    
+
     func hideSkip() {
         if let index = pageControl?.currentPage {
             switch index {
-            case 0...2:
+            case 0 ... 2:
                 skipButton.isHidden = false
             case 3:
                 skipButton.isHidden = true
@@ -76,25 +80,29 @@ class OnboardingViewController: UIViewController {
     }
 }
 
-    // MARK: - Extensions
+// MARK: - Extensions
+
 extension OnboardingViewController: UIPageViewControllerDataSource {
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if let index = pages.firstIndex(of: viewController), index > 0 {
-            return pages[index-1]
+            return pages[index - 1]
         }
         return nil
     }
-    
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if let index = pages.firstIndex(of: viewController), index < pages.count - 1 {
             return pages[index + 1]
         }
         return nil
     }
-    
+
     private func showSignIn() {
         let signInViewController = UIStoryboard.main.instantiateViewController(identifier: "SignInViewController")
-        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate, let window = sceneDelegate.window {
+        if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
             window.rootViewController = signInViewController
             UIView.transition(with: window,
                               duration: 0,
@@ -104,13 +112,16 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
         }
     }
 }
+
 extension OnboardingViewController: UIPageViewControllerDelegate {
-    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            didFinishAnimating finished: Bool,
+                            previousViewControllers: [UIViewController],
+                            transitionCompleted completed: Bool) {
         if let currentViewController = pageViewController.viewControllers?.first,
            let currentIndex = pages.firstIndex(of: currentViewController) {
-            self.pageControl.currentPage = currentIndex
+            pageControl.currentPage = currentIndex
         }
         hideSkip()
     }
 }
-
